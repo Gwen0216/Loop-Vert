@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord Entreprise – LOOP-VERT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #FAFAFA;
+      color: #263238;
+    }
+    header {
+      background-color: #2E7D32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .stats, .actions, .certificates {
+      margin-top: 30px;
+      text-align: left;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+      background: #F1F8E9;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #2E7D32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tableau de Bord – ÉnergieNova</h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#mes-actions">Mes Actions</a>
+    <a href="#certificats">Certificats & ESG</a>
+    <a href="#" onclick="logout()">Déconnexion</a>
+  </nav>
+</header>
+
+<div class="content" id="accueil">
+  <div class="card">
+    <h2>Bienvenue, ÉnergieNova 🌞</h2>
+    <p>Votre engagement durable propulse votre croissance !</p>
+    <p><strong>Actions réalisées :</strong> 50 projets écologiques</p>
+    <p><strong>VertCoins accumulés :</strong> 10000 VTC</p>
+    <p><strong>Économie énergétique :</strong> 180 MWh/an</p>
+    <p><strong>CO₂ évité :</strong> 500 tonnes</p>
+  </div>
+</div>
+
+<div class="content" id="mes-actions">
+  <div class="card">
+    <h2>Projets et Actions</h2>
+    <div class="actions">
+      <ul>
+        <li>🌞  Installation de 200 panneaux photovoltaïques</li>
+        <li>🏢  Certification HQE pour les nouveaux bâtiments</li>
+        <li>🔋  Systèmes de stockage d'énergie solaire déployés</li>
+        <li>♻️  75 tonnes de déchets recyclés en 12 mois</li>
+        <li>🚴‍♂️  Programme mobilité douce pour les salariés</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="content" id="certificats">
+  <div class="card">
+    <h2>Certificats d'Économie d'Énergie & ESG</h2>
+    <div class="certificates">
+      <ul>
+        <li>🏅  35 Certificats d'Économie d'Énergie (CEE) obtenus</li>
+        <li>📄  Rapport ESG validé pour 2024</li>
+        <li>🌍  Contribution au Green Deal européen (partenariat ADEME)</li>
+        <li>🔗  Intégration blockchain Loop-Vert certifiée</li>
+      </ul>
+      <button onclick="alert('Téléchargement rapport ESG 2024 en préparation 🚀')">Télécharger le rapport ESG</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Vérification de la connexion
+  if (localStorage.getItem('connected') !== 'true') {
+    window.location.href = 'login.html';
+  }
+
+  // Déconnexion
+  function logout() {
+    localStorage.removeItem('connected');
+    window.location.href = 'index.html';
+  }
+</script>
+
+</body>
+</html>
