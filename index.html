@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOOP-VERT - Banque verte décentralisée</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/28c40469d1.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
@@ -27,14 +28,20 @@
       font-weight: bold;
     }
     .hero {
-      background: linear-gradient(#A5D6A7, #2E7D32);
-      padding: 100px 20px;
+      position: relative;
+      background: url('images/bannière.png') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       color: white;
     }
     .hero h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 48px;
+      margin-bottom: 20px;
     }
     .hero p {
       font-size: 22px;
@@ -52,7 +59,7 @@
       cursor: pointer;
     }
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     .features {
@@ -63,11 +70,16 @@
       margin-top: 40px;
     }
     .feature {
-      background: #F1F8E9;
+      background: #FFFFFF;
       padding: 30px;
       width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
     }
     footer {
       background: #263238;
@@ -106,17 +118,22 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Valorisez votre impact écologique réel</h1>
-  <p>La première banque verte décentralisée connectée aux Certificats d’Économie d’Énergie (CEE).</p>
-  <button class="btn-primary" onclick="window.location.href='login.html'">Accéder à la plateforme</button>
-</section>
+<section class="hero" style="position: relative; background: url('images/bannière.png') center center/cover no-repeat; height: 600px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1;"></div>
+  
+    <div style="position: relative; z-index: 2;">
+      <h1 style="font-family: 'Montserrat', sans-serif; font-size: 48px;">Valorisez votre impact écologique réel</h1>
+      <p style="font-size: 22px; margin-top: 20px;">La première banque verte décentralisée connectée aux Certificats d’Économie d’Énergie (CEE).</p>
+      <button class="btn-primary" onclick="window.location.href='login.html'" style="background-color: white; color: #2E7D32; padding: 15px 30px; margin-top: 30px; border: none; border-radius: 30px; font-weight: bold; font-size: 16px; cursor: pointer;">Accéder à la plateforme</button>
+    </div>
+  </section>
 
-<section id="probleme">
-  <h2>Problématique</h2>
+<!-- SECTION PROBLÉMATIQUE -->
+<section id="probleme" style="background: #F1F8E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Problématique</h2>
   <div class="features">
     <div class="feature">
-      <h3>❌ Actions écologiques peu valorisées</h3>
+        <h3>❌ Actions écologiques peu valorisées</h3>
     </div>
     <div class="feature">
       <h3>⚡ Manque d'outils ESG</h3>
@@ -127,9 +144,12 @@
   </div>
 </section>
 
-<section id="solution">
-  <h2>Notre Solution</h2>
-  <p>Créer de la valeur à partir de l'impact environnemental, pas de la dette.</p>
+<!-- SECTION SOLUTION -->
+<section id="solution" style="background: #E8F5E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Notre Solution</h2>
+  <p style="font-size: 20px; max-width: 700px; margin: 0 auto 50px; color: #555;">
+    Créer de la valeur à partir de l'impact environnemental, pas de la dette.
+  </p>
   <div class="features">
     <div class="feature">
       <h3>① Registre des actions durables</h3>
@@ -143,23 +163,33 @@
   </div>
 </section>
 
-<section id="fonctionnement">
-  <h2>Fonctionnement de Loop-Vert</h2>
-  <p>Recensement, vérification, attribution de VertCoins et accès au marketplace écologique.</p>
+<!-- SECTION FONCTIONNEMENT -->
+<section id="fonctionnement" style="background: #F1F8E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Fonctionnement de Loop-Vert</h2>
+  <p style="font-size: 20px; max-width: 700px; margin: 0 auto 50px; color: #555;">
+    Recensement, vérification, attribution de VertCoins et accès au marketplace écologique.
+  </p>
 </section>
 
-<section id="marché">
-  <h2>Marché & Opportunité</h2>
-  <p>CEE : 8 milliards € par an en France. Croissance des obligations ESG pour 1,5M d'entreprises.</p>
+<!-- SECTION MARCHÉ -->
+<section id="marché" style="background: #E8F5E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Marché & Opportunité</h2>
+  <p style="font-size: 20px; max-width: 700px; margin: 0 auto 50px; color: #555;">
+    CEE : 8 milliards € par an en France. Croissance des obligations ESG pour 1,5M d'entreprises.
+  </p>
 </section>
 
-<section id="business-model">
-  <h2>Business Model</h2>
-  <p>Commissions Marketplace (2–5%), abonnements ESG B2B, ventes crédits carbone, partenariats publics.</p>
+<!-- SECTION BUSINESS MODEL -->
+<section id="business-model" style="background: #F1F8E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Business Model</h2>
+  <p style="font-size: 20px; max-width: 700px; margin: 0 auto 50px; color: #555;">
+    Commissions Marketplace (2–5%), abonnements ESG B2B, ventes crédits carbone, partenariats publics.
+  </p>
 </section>
 
-<section id="impact">
-  <h2>Notre Impact</h2>
+<!-- SECTION IMPACT -->
+<section id="impact" style="background: #E8F5E9; padding: 80px 20px;">
+  <h2 style="font-size: 36px; font-family: 'Montserrat', sans-serif; margin-bottom: 40px;">Notre Impact</h2>
   <div class="features">
     <div class="feature">
       <h3>🌱 8000 citoyens engagés</h3>
@@ -173,6 +203,7 @@
   </div>
 </section>
 
+<!-- SECTION CTA -->
 <section>
   <h2>Rejoignez Loop-Vert</h2>
   <p>Investissez dans un futur durable et profitez des avantages écologiques concrets.</p>
